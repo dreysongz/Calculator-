@@ -1,0 +1,29 @@
+body{
+background-color:skyblue;
+font-family: cambria;
+width: 100%;
+}
+
+form{
+	background-color: ivory;
+	border-radius: 10px;
+	border: solid black;
+	color: black;
+	width: 37%;
+	height: 80%;
+	margin-left: 20%;
+	margin-top: 10%;
+}
+
+form button{
+	margin-top: 30px;
+	margin-left: 30px;
+	height: 20px;
+}
+.output{
+	width: 70%;
+}
+input{
+	margin: 10px;
+}
+

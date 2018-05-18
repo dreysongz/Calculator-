@@ -1,0 +1,274 @@
+<!doctype html>
+<head>
+<title>
+Calculator</title>
+<meta name="viewport" content="width= device-width">
+<link rel="stylesheet" href="calc.css">
+
+<body>
+
+		<form>
+
+			<input type="text" readonly id="result">
+
+	
+		
+
+<span id="numbers">
+          <input type ="button" value=1 id="one">
+           <input type ="button" value=2 id="two">
+            <input type ="button" value=3 id="three">
+             <input type ="button" value=4 id="four">
+              <input type ="button" value=5 id="five">
+               <input type ="button" value=6 id="six">
+                <input type ="button" value=7 id="seven">
+                 <input type ="button" value=8 id="eight">
+                  <input type ="button" value=9 id="nine">
+                   <input type ="button" value=0 id="zero">
+
+</span>
+
+
+
+
+<span>
+			<input type ="button" class="button" value="Add" id="add">
+			<input type ="button" class="button" value="Subtract" id="subtract">
+			<input type ="button" class="button" value="Divide" id="divide">
+			<input type="button" class="button" value="Multiply" id="multiply">
+			<input type ="button" class="button" value="Modulo" id="mod">
+			<input type ="button" class="button" value="Equals" id="equal">
+			<input type ="button" class="button" value="MR+" id="mem">
+			<input type="button" class="button" value = "AC" id="clear">
+</span>
+		</form>
+		
+
+
+<script src="jquery-3.2.1.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+
+// get all the number buttons in one place
+	
+		var number_1 = document.getElementById("one");
+		var number_2 = document.getElementById("two");
+		var number_3 = document.getElementById("three");
+		var number_4 = document.getElementById("four");
+		var number_5 = document.getElementById("five");
+		var number_6 = document.getElementById("six");
+		var number_7 = document.getElementById("seven");
+		var number_8 = document.getElementById("eight");
+		var number_9 = document.getElementById("nine");
+		var number_0 = document.getElementById("zero");
+
+// presses the appropriate keys upon click
+$("#one").click(function () {
+	$("#result").val(function(i,val) {
+		   return val + 1;
+	});
+	
+});
+
+
+$("#two").click(function () {
+	$("#result").val(function(i,val) {
+		   return val + 2;
+	});
+	
+});
+
+
+$("#three").click(function () {
+	$("#result").val(function(i,val) {
+		   return val + 3;
+	});
+	
+});
+
+$("#four").click(function () {
+	$("#result").val(function(i,val) {
+		   return val + 4;
+	});
+	
+});
+
+
+$("#five").click(function () {
+	$("#result").val(function(i,val) {
+		   return val + 5;
+	});
+	
+});
+
+
+$("#six").click(function () {
+	$("#result").val(function(i,val) {
+		   return val + 6;
+	});
+	
+});
+
+$("#seven").click(function () {
+	$("#result").val(function(i,val) {
+		   return val + 7;
+	});
+	
+});
+
+$("#eight").click(function () {
+	$("#result").val(function(i,val) {
+		   return val + 8;
+	});
+	
+});
+
+$("#nine").click(function () {
+	$("#result").val(function(i,val) {
+		   return val + 9;
+	});
+	
+});
+
+
+$("#zero").click(function () {
+	$("#result").val(function(i,val) {
+		   return val + 0;
+	});
+	
+});
+
+$("#clear").click(function(){
+	$("#result").val("");
+});
+
+
+var firstValue;
+var secondValue;
+var operation;
+
+	// save the input and resets the input values to null
+$("#add, #subtract, #multiply, #divide, #mod").click(function() {
+firstValue = $("#result").val();
+$("#result").val("");
+console.log(firstValue);
+
+// conditional statement to check the buttons pressed and make appropriate calculations
+if (this.id == "#add"){
+operation = "+";
+}
+else if (this.id == "#subtract"){
+operation = "-";
+}
+else if (this.id == "#multiply"){
+operation = "*";
+}
+else if(this.id == "#divide"){
+operation = "/";
+} 
+else if (this.id == "#mod"){
+operation = "%";
+}
+
+});
+
+
+// makes necasary calclations on clicking equals to button
+
+$("#equal").click(function() {
+secondValue = $("#result").val();
+	$("#result").val("");
+	console.log(secondValue);
+
+// var answer = firstValue(operation)secondValue;
+// $("#result").val(answer);	
+
+// });
+
+});
+});
+
+
+
+/** 
+function calculate{
+	var a; 
+	var b;
+
+	a = document.getElementById("result").value;
+
+	function nullify(){
+		document.getElementById("result").value = "";
+	}
+	nullify();	
+
+}
+
+
+
+
+// function for addition
+
+	function addition(a, b){ 
+
+	
+
+ var output = a + b;
+ document.getElementById("result").value= output;
+}
+
+// function for subtraction
+	function subtraction(a, b){       
+	 var output = a - b;
+ document.getElementById("result").value= output;
+}
+
+
+ // function for division
+function division(a, b){  
+	 var output = a / b;
+ document.getElementById("result").value = output;
+}
+
+
+// function for multiplication
+function multiplication(a, b){       
+		 var output = a * b;
+ document.getElementById("result").value = output;
+}
+
+// function for modulo
+function modulo(a, b){       
+	 var output = a % b;
+ document.getElementById("result").value = output;
+}
+
+
+
+// document.getElementById("add").addEventListener('click', addition, false);
+
+	
+/**
+
+
+FUNCTION TO CALCULATE RESULTS
+
+// function for results
+function equals(){       
+}
+
+
+
+
+
+
+
+**/
+
+
+
+</script>
+</body>
+</html>
